@@ -1,0 +1,522 @@
+@font-face {
+    font-family: Inter;
+    src: url(fonts/inter/Inter-Medium.otf);
+}
+
+:root {
+    --background-color: rgba(245,247,250,255);
+    --footer-bc: rgba(38,50,56,255);
+    --green: rgba(76,175,79,255);
+}
+
+button {
+    width: 6rem;
+    height: 3rem;
+    background-color: var(--green);
+    color: white;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Inter;
+    padding: 0;
+    margin: 0;
+    > * {
+    padding: 0 10rem;
+    }
+
+    p {
+        opacity: 0.6;
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        opacity: 0.7;
+    }
+}
+
+header {
+    background-color: var(--background-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 8rem;
+    gap: 1.5rem;
+    .nav-link {
+        display: flex;
+        margin: auto;
+        gap: 5rem;
+        > * {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .login {
+        text-decoration: none;
+        color: var(--green);
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+.introducing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 45rem;
+    .introducing_text {
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+        }
+
+        span {
+            color: var(--green);
+        }
+
+        button {
+            width: 10rem;
+            height: 4rem;
+            margin-top: 1rem;
+        }
+    }
+
+    img {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+.clients {
+    text-align: center;
+    gap: 10rem;
+    .images {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+        padding: 2rem 0;
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+}
+
+.management {
+    text-align: center;
+    h2 {
+        padding: 0 24rem;
+    }
+}
+
+.membership {
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    .first,
+    .second,
+    .third {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.03);
+        width: 21rem;
+        border-radius: 1rem;
+        padding: 2rem;
+        h3 {
+           font-size: 2.5rem; 
+           margin: 0;
+        }
+
+        img {
+            width: 8rem;
+            height: 7rem;
+        }
+    }
+}
+
+
+.pixelgrade,
+.design_footer {
+    display: flex;
+    margin-top: 7rem;
+    align-items: center;
+    img {
+        width: 40rem;
+        height: 35rem;
+    }  
+
+    .text {
+        padding: 0 8rem;
+        h5 {
+            font-size: 3rem;
+            margin: 0;
+        }  
+
+        button {
+            width: 13rem;
+            height: 4rem;
+            margin-top: 1rem;
+        }  
+    }  
+}  
+
+
+.statistic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25rem;
+    background-color: var(--background-color);
+    margin-top: 5rem;
+    .statistic_text {
+        h3 {
+            font-size: 3rem;
+            margin: 0;
+        }  
+
+        span {
+            color: var(--green);
+        }
+    }  
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    > div {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        flex: 1 1 50%;
+        img {
+                width: 4rem;
+                height: 4rem;
+                margin: 0;
+            }  
+
+        .text {
+            margin-left: 1rem;
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin: 0;
+            } 
+        }
+    }
+}
+
+.tesla {
+    display: flex;
+    background-color: var(--background-color);
+    margin-top: 2rem;
+    padding: 1.5rem 9rem;
+    img {
+        width: 28rem;
+        height: 28rem;
+        padding-right: 3rem;
+    }
+
+    a {
+        font-size: 1.4rem;
+        color: var(--green);
+        text-decoration: none;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    .customers_logos {
+        display: flex;
+        align-items: center;
+        p {
+            cursor: pointer;
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+
+.blog {
+    text-align: center;
+    padding: 0 30rem;
+    p {
+        margin-top: 10px;
+    }
+}
+
+.items {
+    display: flex;
+    gap: 2rem;
+    img {
+        width: 100%;
+        height: 25rem;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .items_text {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+        font-size: 1.7rem;
+        width: 80%;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        background-color: var(--background-color);
+        top: 16rem;
+        border-radius: 10px;
+        padding: 1rem;
+        p {
+            font-size: 1.6rem;
+            margin-top: 0;
+
+        }
+
+        > :nth-child(2) {
+            cursor: pointer;
+            color: var(--green);
+            text-decoration: none;
+        }
+    }
+}
+
+
+.last_block {
+    margin-top: 13rem;
+    padding: 2rem 20rem;
+    background-color: var(--background-color);
+    text-align: center;
+    h3 {
+        font-size: 4.5rem;
+        margin: 2rem;
+    }
+
+    button {
+        width: 15rem;
+        height: 4rem;
+    }
+}
+
+footer {
+    background-color: var(--footer-bc);
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 8rem;
+    padding: 4rem 12rem;
+    > * {
+        text-align: start;
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                margin: 1rem 0;
+                font-size: 1.3rem;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .contacts {
+        margin-right: auto;
+        img {
+            margin-bottom: 1.5rem;
+        }
+
+        .social_networks {
+            display: flex;
+            padding-top: 2.5rem;
+            gap: 2.5rem;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .email {
+        position: relative;
+    }
+
+    .email input {
+        width: 18rem;
+        height: 1.5rem;
+        border: none;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: rgba(81,91,96,255);
+        color: white;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+
+    a img {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        z-index: 2;
+        top: 35%;
+        right: 5%;
+    }   
+}   
+
+
+
+/* FOR TABLETS */
+@media (width: 768px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .introducing,
+    .clients,
+    .management,
+    .membership,
+    .pixelgrade,
+    .design_footer,
+    .statistic,
+    .tesla,
+    .blog,
+    .items,
+    .last_block,
+    footer {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .introducing img,
+    .pixelgrade img,
+    .design_footer img,
+    .tesla img {
+        width: 40%;
+        height: 40%;
+    }
+
+    header {
+        padding: 0.7rem 2rem;
+        gap: 1rem;
+        height: 100px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .logo {
+            height: 1.8rem;
+        }
+        .nav-link {
+            gap: 2rem;
+            > * {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .clients .images {
+        gap: 3rem;
+    }
+
+    .management h2 {
+        padding: 1rem;
+    }
+
+    .pixelgrade .text,
+    .design_footer .text,
+    .tesla .text,
+    .blog {
+        text-align: center;
+        padding: 3rem;
+    }
+
+    .membership {
+        gap: 2rem;
+    }
+
+    .membership .first,
+    .membership .second,
+    .membership .third {
+        width: 90%;
+    }
+
+
+    .pixelgrade {
+        margin: 0;
+    }
+    
+    .statistic {
+        height: 25rem;
+        .statistic_text {
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            > * {
+                justify-content: center;
+                margin: 0;
+            }
+        }
+    }
+
+    .tesla img,
+    .tesla .customers_logos img {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+
+    .items {
+        flex-direction: column;
+        width: 92%;
+        > * {
+            height: 30rem;
+        }
+    }
+
+    .last_block {
+        margin-top: 1rem;
+    }
+
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 4rem;
+        gap: 3rem;
+        text-align: center;
+        > * {
+        width: 100%;
+        }
+        .email a img {
+            top: 71%;
+            right: 52%;
+        }
+    }
+}
