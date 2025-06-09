@@ -33,11 +33,11 @@ body {
 
     p {
         opacity: 0.6;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.9rem;
         margin-bottom: 0;
         opacity: 0.7;
     }
@@ -104,11 +104,11 @@ header {
     .images {
         display: flex;
         justify-content: center;
-        gap: 10rem;
+        gap: 10.5rem;
         padding: 2rem 0;
         img {
-            width: 4rem;
-            height: 4rem;
+            width: 5rem;
+            height: 5rem;
         }
     }
 
@@ -187,7 +187,11 @@ header {
         span {
             color: var(--green);
         }
-    }  
+    }
+    
+    .text h3 {
+        margin: 0;
+    }
 }
 
 .container {
@@ -231,8 +235,13 @@ header {
         padding-right: 3rem;
     }
 
+    h3 {
+        color: var(--green);
+        font-size: 1.6rem;
+    }
+
     a {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         color: var(--green);
         text-decoration: none;
     }
@@ -249,8 +258,8 @@ header {
         }
 
         img {
-            width: 4rem;
-            height: 4rem;
+            width: 4.5rem;
+            height: 4.5rem;
         }
     }
 }
@@ -269,6 +278,7 @@ header {
     img {
         width: 100%;
         height: 25rem;
+        box-sizing: border-box;
     }
 
     > * {
@@ -282,6 +292,7 @@ header {
         box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
         font-size: 1.7rem;
         width: 80%;
+        height: 45%;
         text-align: center;
         position: absolute;
         z-index: 2;
@@ -290,15 +301,17 @@ header {
         border-radius: 10px;
         padding: 1rem;
         p {
-            font-size: 1.6rem;
-            margin-top: 0;
+            font-size: 1.7rem;
+            margin: 0;
 
         }
 
-        > :nth-child(2) {
+        a {
+            display: inline-block;
             cursor: pointer;
             color: var(--green);
             text-decoration: none;
+            padding: 2rem;
         }
     }
 }
@@ -310,12 +323,12 @@ header {
     background-color: var(--background-color);
     text-align: center;
     h3 {
-        font-size: 4.5rem;
+        font-size: 5.5rem;
         margin: 2rem;
     }
 
     button {
-        width: 15rem;
+        width: 14rem;
         height: 4rem;
     }
 }
@@ -338,7 +351,7 @@ footer {
             list-style: none;
             li {
                 margin: 1rem 0;
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 opacity: 0.7;
                 cursor: pointer;
             }
@@ -346,19 +359,32 @@ footer {
     }
 
     .contacts {
-        margin-right: auto;
-        img {
+        > img {
             margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
         }
 
         .social_networks {
             display: flex;
             padding-top: 2.5rem;
-            gap: 2.5rem;
-            img {
-                width: 1.5rem;
-                height: 1.5rem;
-                cursor: pointer;
+            gap: 1.5rem;
+            .img_background {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(60,71,76,255);
+                border-radius: 50%;
+                height: 2.5rem;
+                width: 2.5rem;
+                img {
+                    display: flex;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -374,10 +400,15 @@ footer {
         padding: 1rem;
         border-radius: 10px;
         background-color: rgba(81,91,96,255);
-        color: white;
         font-size: 1.2rem;
         z-index: 1;
-    }
+        }
+
+        input::placeholder {
+            color: white; 
+            opacity: 0.7;
+        }
+
 
     a img {
         width: 1.5rem;
@@ -391,132 +422,425 @@ footer {
 
 
 
-/* FOR TABLETS */
-@media (width: 768px) {
-    * {
+
+/*     BIG PHONES AND TABLETS */
+@media (min-width: 480px) and (max-width: 767px) {
+    body {
         overflow-x: hidden;
+        > * {
+            padding: 0 2rem;
+            text-align: center;
+        }
     }
 
-    .introducing,
-    .clients,
-    .management,
-    .membership,
-    .pixelgrade,
-    .design_footer,
-    .statistic,
-    .tesla,
-    .blog,
-    .items,
-    .last_block,
-    footer {
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .introducing img,
-    .pixelgrade img,
-    .design_footer img,
-    .tesla img {
-        width: 40%;
-        height: 40%;
-    }
-
-    header {
-        padding: 0.7rem 2rem;
+   header {
+        padding: 1rem 2rem;
         gap: 1rem;
-        height: 100px;
         justify-content: space-between;
         flex-wrap: wrap;
+        height: 100%;
         .logo {
             height: 1.8rem;
         }
         .nav-link {
-            gap: 2rem;
+            gap: 1.5rem;
             > * {
                 font-size: 0.9rem;
             }
         }
     }
 
-    .clients .images {
-        gap: 3rem;
-    }
-
-    .management h2 {
-        padding: 1rem;
-    }
-
-    .pixelgrade .text,
-    .design_footer .text,
-    .tesla .text,
-    .blog {
-        text-align: center;
-        padding: 3rem;
-    }
-
-    .membership {
-        gap: 2rem;
-    }
-
-    .membership .first,
-    .membership .second,
-    .membership .third {
-        width: 90%;
-    }
-
-
-    .pixelgrade {
-        margin: 0;
-    }
-    
-    .statistic {
-        height: 25rem;
-        .statistic_text {
-            text-align: center;
+  .introducing {
+        flex-direction: column;
+        height: auto;
+        img {
+            margin-top: 3rem;
+            width: 25rem;
+            height: 25rem;
         }
+        .introducing_text h1 {
+            font-size: 3.5rem;
+        }
+    }
 
+    .images {
+        gap: 2rem;
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+
+    .management {
+        .membership {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            padding: 0;
+        } 
+    }
+
+
+    .pixelgrade, .design_footer {
+        flex-direction: column;
+        img {
+            width: calc(100% - 4rem);
+            height: 50%;
+        }
+        .text {
+            padding: 0;
+        }
+    }
+
+    .statistic {
+        height: 100%;
+        display: block;
         .container {
             width: 100%;
-            > * {
-                justify-content: center;
-                margin: 0;
+            display: flex;
+            > div {
+                flex-direction: column;
             }
         }
     }
 
-    .tesla img,
-    .tesla .customers_logos img {
-        padding: 1rem 0;
+    .tesla {
+        flex-direction: column;
+        padding: 2rem;
+        img {
+            width: 80%;
+        }
+
+    .customers_logos {
+        display: block;
         text-align: center;
+        img {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        a {
+            display: block;
+            font-size: 1.8rem;
+            margin-top: 1rem;
+            }
+        }
     }
 
+    .blog {
+        padding: 0 2rem;
+    }
 
     .items {
         flex-direction: column;
-        width: 92%;
         > * {
-            height: 30rem;
+            margin: 2.5rem 0;
         }
     }
 
     .last_block {
-        margin-top: 1rem;
+        padding: 2rem 0;
+        h3 {
+        font-size: 4rem;
+        }
     }
-
 
     footer {
         flex-direction: column;
-        align-items: center;
-        padding: 2rem 4rem;
-        gap: 3rem;
-        text-align: center;
-        > * {
-        width: 100%;
-        }
-        .email a img {
-            top: 71%;
-            right: 52%;
+        padding: 2rem 2rem;
+        gap: 2rem;
+        a img  {
+            display: none;
         }
     }
+}
+
+
+
+
+
+
+
+
+
+/* FOR TABLETS AND SMALL MONITORS */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+        > * {
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+    }
+
+
+    header {
+        padding: 1rem 2rem;
+        gap: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 100%;
+        .logo {
+            height: 1.8rem;
+        }
+        .nav-link {
+            gap: 1.5rem;
+            > * {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .introducing {
+        img {
+        width: 24rem;
+        height: 24rem;
+        }
+    }
+
+   .management .membership,
+    .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+
+    .management h2 {
+        padding: 0;
+    }
+
+    .statistic {
+        height: 100%;
+        display: block;
+        text-align: center;
+        .container {
+            width: 100%;
+            display: flex;
+            > div {
+                display: flex;
+                justify-content: center;
+                text-align: start;
+            }
+        }
+    }
+
+    .pixelgrade,
+    .design_footer {
+        img {
+            width: 26rem;
+        }
+
+        .text {
+            padding: 0 1rem;
+        }
+    }
+
+    .tesla {
+        flex-direction: column;
+        padding: 2rem;
+        img {
+            width: 80%;
+        }
+
+        .customers_logos {
+            display: block;
+            text-align: center;
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            a {
+                display: block;
+                font-size: 1.8rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .blog {
+        padding: 0 2rem;
+    }
+
+    .last_block {
+        padding: 2rem 2rem;
+    }
+
+    .clients .images {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+        .block {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        }
+
+    .items {
+        > div {
+            width: 70%;
+            margin: 3rem;
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+        a img  {
+            display: none;
+        }
+    }  
+}
+
+
+
+
+/* FOR 1280px MONITORS */
+@media (width: 1280px){
+        body {
+        overflow-x: hidden;
+        > * {
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+    }
+
+
+    header {
+        padding: 1rem 2rem;
+        gap: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 100%;
+        .logo {
+            height: 1.8rem;
+        }
+        .nav-link {
+            gap: 1.5rem;
+            > * {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .introducing {
+        img {
+        width: 24rem;
+        height: 24rem;
+        }
+    }
+
+   .management .membership,
+    .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+
+    .management h2 {
+        padding: 0;
+    }
+
+    .statistic {
+        height: 100%;
+        display: block;
+        text-align: center;
+        .container {
+            width: 100%;
+            display: flex;
+            > div {
+                display: flex;
+                justify-content: center;
+                text-align: start;
+            }
+        }
+    }
+
+    .pixelgrade,
+    .design_footer {
+        img {
+            width: 26rem;
+        }
+
+        .text {
+            padding: 0 1rem;
+        }
+    }
+
+    .tesla {
+        flex-direction: column;
+        padding: 2rem;
+        img {
+            width: 50%;
+        }
+
+        .customers_logos {
+            display: block;
+            text-align: center;
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            a {
+                display: block;
+                font-size: 1.8rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .blog {
+        padding: 0 2rem;
+    }
+
+    .last_block {
+        padding: 2rem 2rem;
+    }
+
+    .clients .images {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+        .block {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        }
+
+    .items {
+        > div {
+            width: 50%;
+            margin: 3rem;
+        }
+    }
+
+    footer {
+        padding: 1rem;
+        gap: 5rem;
+        a img  {
+            display: none;
+        }
+    }  
+
 }
