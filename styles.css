@@ -48,15 +48,28 @@ header {
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0.7rem 8rem;
     gap: 1.5rem;
     .nav-link {
         display: flex;
-        margin: auto;
-        gap: 5rem;
-        > * {
-            text-decoration: none;
-            color: black;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        
+        .left_side {
+            display: flex;
+            gap: 5rem;
+            > * {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .right_side {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
         }
     }
     .login {
@@ -66,6 +79,16 @@ header {
 
     button {
         font-size: 1rem;
+    }
+    
+    .burger {
+        display: none;
+        width: auto;
+        height: auto;
+    }
+
+    .close-menu {
+        display: none;
     }
 }
 
@@ -428,6 +451,19 @@ footer {
 
 /* FOR PHONES */
 @media(min-width: 320px) and (max-width: 479px) {
+
+    h1 {
+        font-size: 2.5rem ;
+    }
+
+    h2 {
+        font-size: 2.2rem ;
+    }
+
+    h3 {
+        font-size: 2rem ;
+    }
+
     body {
         overflow-x: hidden;
         width: 100%;
@@ -437,24 +473,79 @@ footer {
         }
     }
 
+   
+
    header {
-        padding: 1rem 1rem;
+        padding: 1rem 2rem 3rem 2rem;
         gap: 1rem;
         justify-content: space-between;
         flex-wrap: wrap;
         height: 100%;
         .logo {
-            height: 1.8rem;
+            height: 1rem;
         }
         .nav-link {
-            gap: 1rem;
-            > * {
-                font-size: 0.6rem;
+            display: none;
+            flex-direction: column;
+            background: var(--background-color);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100vw;
+            z-index: 100;
+        }
+        .nav-link.open {
+            max-width: calc(100% - 2rem);
+            margin: 1rem;
+            padding: 1rem;
+            box-shadow: 0 0 20px 2px rgb(117, 113, 113);
+            border-radius: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            .left_side {
+                display: block;
+                > * {
+                    display: block;
+                    margin: 15px 0;
+                    text-align: start;
+                    opacity: 0.9;
+                    font-size: 1.2rem;
+                }
             }
+            .right_side {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .close-menu {
+                display: flex;
+                justify-content: end;
+                position: absolute;
+                padding: 5px;
+                width: auto;
+                top: 1rem;
+                right: 1.5rem;
+                background: none;
+                border: 0.5px solid var(--green);
+                font-size: 2rem;
+                font-weight: 100;
+                color: var(--green);
+            }
+        }
+
+        .burger {
+            display: block;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--green);
+/*             z-index: 101; */
         }
     }
 
-  .introducing {
+    .introducing {
         flex-direction: column;
         height: auto;
         img {
@@ -508,9 +599,13 @@ footer {
     .statistic {
         height: 100%;
         display: block;
+        .statistic_text {
+            padding-top: 2rem;
+        }
         .container {
             width: 100%;
             display: flex;
+            flex-direction: column;
             > div {
                 flex-direction: column;
             }
@@ -592,6 +687,19 @@ footer {
 
 /*     BIG PHONES AND TABLETS */
 @media (min-width: 480px) and (max-width: 767px) {
+
+    h1 {
+        font-size: 2.5rem ;
+    }
+
+    h2 {
+        font-size: 2.2rem ;
+    }
+
+    h3 {
+        font-size: 2rem ;
+    }
+
     body {
         overflow-x: hidden;
         > * {
@@ -602,19 +710,71 @@ footer {
 
 
    header {
-        padding: 1rem 2rem;
+        padding: 1rem 2rem 3rem 2rem;
         gap: 1rem;
         justify-content: space-between;
         flex-wrap: wrap;
         height: 100%;
         .logo {
-            height: 1.8rem;
+            height: 1.5rem;
         }
-        .nav-link {
-            gap: 1.5rem;
-            > * {
-                font-size: 0.9rem;
+         .nav-link {
+            display: none;
+            flex-direction: column;
+            background: var(--background-color);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100vw;
+            z-index: 100;
+        }
+        .nav-link.open {
+            max-width: calc(100% - 2rem);
+            margin: 1rem;
+            padding: 1rem;
+            box-shadow: 0 0 20px 2px rgb(117, 113, 113);
+            border-radius: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            .left_side {
+                display: block;
+                > * {
+                    display: block;
+                    margin: 15px 0;
+                    text-align: start;
+                    opacity: 0.9;
+                    font-size: 1.2rem;
+                }
             }
+            .right_side {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .close-menu {
+                display: flex;
+                justify-content: end;
+                position: absolute;
+                padding: 5px;
+                width: auto;
+                top: 1rem;
+                right: 1.5rem;
+                background: none;
+                border: 0.5px solid var(--green);
+                font-size: 2rem;
+                font-weight: 100;
+                color: var(--green);
+            }
+        }
+
+        .burger {
+            display: block;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--green);
         }
     }
 
@@ -668,6 +828,9 @@ footer {
     .statistic {
         height: 100%;
         display: block;
+        .statistic_text {
+            padding-top: 2rem;
+        }
         .container {
             width: 100%;
             display: flex;
@@ -678,26 +841,27 @@ footer {
     }
 
     .tesla {
+        
+        display: block;
         flex-direction: column;
         padding: 2rem;
         img {
-            width: 80%;
+            padding: 0;
         }
-
-    .customers_logos {
-        display: block;
-        text-align: center;
-        img {
-            width: 3rem;
-            height: 3rem;
-        }
-        
-        a {
+        .customers_logos {
             display: block;
-            font-size: 1.8rem;
-            margin-top: 1rem;
+            text-align: center;
+            img {
+                width: 3rem;
+                height: 3rem;
             }
-        }
+            
+            a {
+                display: block;
+                font-size: 1.8rem;
+                margin-top: 1rem;
+                }
+            }
     }
 
     .blog {
@@ -705,9 +869,17 @@ footer {
     }
 
     .items {
+        display: flex;
+        justify-content: center;
         flex-direction: column;
-        > * {
-            margin: 2.5rem 0;
+        gap: 7rem;
+        > div {
+            margin: 0 2rem;
+            max-width: 100%;
+            height: 100%;
+            .items_text {
+                width: 95%;
+            }
         }
     }
 
@@ -738,7 +910,20 @@ footer {
 
 /* FOR TABLETS AND SMALL MONITORS */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    h1 {
+        font-size: 2.5rem ;
+    }
+
+    h2 {
+        font-size: 2.2rem ;
+    }
+
+    h3 {
+        font-size: 2rem ;
+    }
+
     body {
         overflow-x: hidden;
         > * {
@@ -749,19 +934,73 @@ footer {
 
 
     header {
-        padding: 1rem 2rem;
+        padding: 1rem 3.5rem;
         gap: 1rem;
+        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         height: 100%;
+        width: 100%;
         .logo {
             height: 1.8rem;
         }
-        .nav-link {
-            gap: 1.5rem;
-            > * {
-                font-size: 0.9rem;
+         .nav-link {
+            display: none;
+            flex-direction: column;
+            background: var(--background-color);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100vw;
+            z-index: 100;
+        }
+        .nav-link.open {
+            max-width: calc(100% - 2rem);
+            margin: 1rem;
+            padding: 1rem;
+            box-shadow: 0 0 20px 2px rgb(117, 113, 113);
+            border-radius: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            .left_side {
+                display: block;
+                > * {
+                    display: block;
+                    margin: 15px 0;
+                    text-align: start;
+                    opacity: 0.9;
+                    font-size: 1.2rem;
+                }
             }
+            .right_side {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .close-menu {
+                display: flex;
+                justify-content: end;
+                position: absolute;
+                padding: 5px;
+                width: auto;
+                top: 1rem;
+                right: 1.5rem;
+                background: none;
+                border: 0.5px solid var(--green);
+                font-size: 2rem;
+                font-weight: 100;
+                color: var(--green);
+            }
+        }
+
+        .burger {
+            display: block;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--green);
         }
     }
 
@@ -770,6 +1009,12 @@ footer {
         width: 24rem;
         height: 24rem;
         }
+    }
+
+
+    .clients .images > * {
+        width: 3rem;
+        height: 3rem ;
     }
 
    .management .membership,
@@ -790,6 +1035,9 @@ footer {
         height: 100%;
         display: block;
         text-align: center;
+        .statistic_text {
+            padding-top: 2rem;
+        }
         .container {
             width: 100%;
             display: flex;
@@ -805,6 +1053,7 @@ footer {
     .design_footer {
         img {
             width: 26rem;
+            height: auto;
         }
 
         .text {
@@ -813,12 +1062,9 @@ footer {
     }
 
     .tesla {
-        flex-direction: column;
+        display: block;
+        text-align: center;
         padding: 2rem;
-        img {
-            width: 80%;
-        }
-
         .customers_logos {
             display: block;
             text-align: center;
@@ -858,13 +1104,15 @@ footer {
 
     .items {
         > div {
-            width: 70%;
+            width: 550px;
+            height: 400px;
             margin: 3rem;
         }
     }
 
     footer {
         flex-direction: column;
+        text-align: center;
         padding: 2rem;
         gap: 2rem;
         a img  {
@@ -874,10 +1122,161 @@ footer {
 }
 
 
+@media (min-width: 1024px) and (max-width: 1279px) {
+    header {
+        padding: 2rem 3rem;
+        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            height: 1.8rem;
+        }
+        .nav-link {
+            gap: 2rem;
+            .left_side {
+                display: flex;
+                font-size: 0.9rem;
+                gap: 2rem;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 3.5rem ;
+    }
+
+    h2 {
+        font-size: 3.2rem ;
+    }
+
+    h3 {
+        font-size: 3rem ;
+    }
+
+        body {
+        overflow-x: hidden;
+        > * {
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+    }
+
+    .introducing {
+        img {
+        width: 24rem;
+        height: 24rem;
+        }
+    }
+
+   .management .membership,
+    .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
 
 
-/* FOR 1280px MONITORS */
-@media (width: 1280px){
+    .management h2 {
+        padding: 0;
+    }
+
+    .statistic {
+        height: 100%;
+        padding: 1rem;
+        .container {
+            display: flex;
+            > div {
+                display: flex;
+                justify-content: start;
+                text-align: start;
+            }
+        }
+    }
+
+    .pixelgrade,
+    .design_footer {
+        .text {
+            padding: 0 1rem;
+        }
+    }
+
+    .tesla {
+        padding: 2rem;
+        .customers_logos {
+            display: block;
+            text-align: center;
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            a {
+                display: block;
+                font-size: 1.8rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .blog {
+        padding: 0 8rem;
+    }
+
+    .last_block {
+        padding: 2rem 2rem;
+    }
+
+    .clients .images {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+        .block {
+        display: block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        }
+
+    .items {
+        > div {
+            width: 550px;
+            height: 400px;
+            margin: 3rem;
+        }
+    }
+
+    .last_block h3 {
+        font-size: 4.5rem;
+    }
+
+    footer {
+        gap: 5rem;
+        padding: 1rem;
+        a img  {
+            display: none;
+        }
+    }
+}
+
+/* FOR MONITORS */
+@media (min-width: 1280px) and (max-width: 1700px){
+
+    h1 {
+        font-size: 3.5rem ;
+    }
+
+    h2 {
+        font-size: 3.2rem ;
+    }
+
+    h3 {
+        font-size: 3rem ;
+    }
+
         body {
         overflow-x: hidden;
         > * {
@@ -888,7 +1287,7 @@ footer {
 
 
     header {
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
         gap: 1rem;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -897,9 +1296,10 @@ footer {
             height: 1.8rem;
         }
         .nav-link {
-            gap: 1.5rem;
-            > * {
-                font-size: 0.9rem;
+            gap: 5rem;
+            .left_side {
+                display: flex;
+                gap: 3rem;
             }
         }
     }
@@ -911,7 +1311,7 @@ footer {
         }
     }
 
-   .management .membership,
+   .management,
     .items {
         display: flex;
         flex-direction: column;
@@ -920,6 +1320,9 @@ footer {
         gap: 4rem;
     }
 
+    .membership {
+        gap: 1rem;
+    }
 
     .management h2 {
         padding: 0;
@@ -927,14 +1330,12 @@ footer {
 
     .statistic {
         height: 100%;
-        display: block;
-        text-align: center;
+        padding: 1rem;
         .container {
-            width: 100%;
             display: flex;
             > div {
                 display: flex;
-                justify-content: center;
+                justify-content: start;
                 text-align: start;
             }
         }
@@ -942,22 +1343,13 @@ footer {
 
     .pixelgrade,
     .design_footer {
-        img {
-            width: 26rem;
-        }
-
         .text {
             padding: 0 1rem;
         }
     }
 
     .tesla {
-        flex-direction: column;
         padding: 2rem;
-        img {
-            width: 50%;
-        }
-
         .customers_logos {
             display: block;
             text-align: center;
@@ -975,7 +1367,7 @@ footer {
     }
 
     .blog {
-        padding: 0 2rem;
+        padding: 0 8rem;
     }
 
     .last_block {
@@ -997,14 +1389,18 @@ footer {
 
     .items {
         > div {
-            width: 50%;
+            width: 550px;
+            height: 400px;
             margin: 3rem;
         }
     }
 
+    .last_block h3 {
+        font-size: 4.5rem;
+    }
+
     footer {
         padding: 1rem;
-        gap: 5rem;
         a img  {
             display: none;
         }
